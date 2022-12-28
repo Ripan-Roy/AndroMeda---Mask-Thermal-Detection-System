@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Video Live Stream</title>
+  </head>
+  <body>
+    <h1>Video Live Stream</h1>
+    <!-- <img src="{% url 'video_feed' %}"> -->
+    <!-- <img src="{% url 'webcam_feed' %}"> -->
+    {% if  not is_thermal %}
+     <img src="{% url 'mask_feed' %}">
+
+     <br><br>
+     <a href="?cam_type=Thermal" >Switch to Thermal Camera </a>
+    {% else %}
+    <img src="{%url 'ripanDa' %}" />
+    <br><br>
+    <a href="/" >Switch to Mask Detection Camera </a>
+    
+
+    {% endif %}
+	<!-- <img src="{% url 'livecam_feed' %}"> -->
+
+  </body>
+</html>
